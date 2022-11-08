@@ -43,12 +43,14 @@
 }
 
 .catalog__item{
+  display: flex;
   transition: $default-transition-settings;
   &:hover,
   &:focus {
     transform: scale(1.05);
   }
   a{
+    overflow: hidden;
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
@@ -81,7 +83,6 @@
     object-fit: cover;
     vertical-align: middle;
     overflow: hidden;
-    border-radius: 16px 16px 0px 0px;
   }
 }
 .catalog__item-title{
