@@ -37,10 +37,11 @@
           button.btn.btn--main(
             @click="filtering"
           ) Применить
-          button.btn.btn--alt(
-            v-if="breed !== 'all' || name || freeCheck.length"
-            @click="clearFiltering"
-          ) Сброс
+          transition(name="btn-reset-animation")
+            button.btn.btn--alt(
+              v-if="breed !== 'all' || name || freeCheck.length"
+              @click="clearFiltering"
+            ) Сброс
         .catalog__card-container
           .catalog__card-sort
             button.catalog__card-sort-btn(
@@ -50,7 +51,11 @@
               .catalog__card-sort-img
                 img#img( src="../assets/icons/sort.svg")
             .catalog__card-sort-title По цене
-          ul.catalog__list
+        
+          transition-group.catalog__list(
+            name="list-animation"
+            tag="ul"
+            )
             li.catalog__item(
               v-for="item in cats"
               :key="item.id"

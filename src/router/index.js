@@ -13,15 +13,12 @@ const routes = [
   },
   {
     path: "/catalog/",
-    component: catalog,
-    // component: () =>
-    //   import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    component: catalog
   },
   {
     path: "/cat/:id",
     component: cat,
-    // component: () =>
-    //   import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+
   }
 ];
 

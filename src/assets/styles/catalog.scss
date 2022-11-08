@@ -168,3 +168,22 @@
   font-size: 20px;
   line-height: 24px;
 }
+.btn-reset-animation-active, .btn-reset-animation-leave-active{
+  transition: $default-transition-settings;
+}
+.btn-reset-animation-enter, .btn-reset-animation-leave-to{
+  transform: translateY(30px);
+  opacity: 0;
+}
+.list-animation-item {
+  transition: all 1s;
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-animation-enter, .list-animation-leave-to{
+  opacity: 0;
+  transform: translateY(30px);
+}
+.list-animation-leave-active{
+  position: absolute;
+}
