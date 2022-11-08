@@ -1,0 +1,78 @@
+body {
+  font-family: $font-family;
+}
+button {
+  font-family: $font-family;
+}
+* {
+  padding: 0;
+  margin: 0;
+  &:focus-visible{
+    outline: 2px solid $color-decoration;
+  }
+}
+
+ul {
+  list-style: none;
+}
+.wrapper {
+  position: relative;
+  height: 100vh;
+
+  &.scroll-hidden {
+    overflow: hidden;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100vh;
+}
+.page__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.container{
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.btn{
+  position: relative;
+  z-index: 15;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  transition: $default-transition-settings;
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+  &--main{
+    color: $color-white;
+    background-color: $color-decoration;
+  }
+  &--alt{
+    transition: $default-transition-settings;
+    border: 1px solid $color-decoration;
+    color: $color-decoration;
+    background-color: $color-white;
+    &:hover,
+    &:focus {
+      background: rgba(114, 77, 240, 0.1);
+    }
+  }
+}

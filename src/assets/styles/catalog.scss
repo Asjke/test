@@ -1,0 +1,132 @@
+.catalog{
+}
+.catalog__container{
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: min-content max-content;
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.catalog__filter{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+}
+
+.catalog-btn-filter{
+  display: none;
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
+.catalog__filter-checkbox-container{
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.catalog__filter-checkbox-row{
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+.catalog__list{
+  display: grid;
+  grid-gap: 30px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
+}
+
+.catalog__item{
+
+}
+.catalog__card{
+  position: relative;
+  display: flex;
+  width: 100%;
+  background: none;
+  flex-direction: column;
+  border-style: solid;
+  border-color: rgba(114, 77, 240, 0.3);
+  border-radius: 16px 16px 16px 16px;
+
+
+}
+.catalog__img-container{
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  margin-bottom: 20px;
+  width: 100%;
+  img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    vertical-align: middle;
+    overflow: hidden;
+    border-radius: 16px 16px 0px 0px;
+  }
+}
+.catalog__item-title{
+  min-height: 40px;
+  margin-bottom: 20px;
+  
+}
+.catalog__item-price{
+  min-height: 20px;
+  margin-bottom: 20px;
+}
+.catalog__card-sort{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 12px;
+}
+.catalog__card-sort-btn{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.catalog__card-sort-img-rotate{
+  transition: $default-transition-settings;
+  img{
+    transition: $default-transition-settings;
+    transform: rotate(180deg);
+  }
+}
+.catalog__card-sort-img-rotate-1{
+  transition: $default-transition-settings;
+  img{
+    transition: $default-transition-settings;
+    transform: rotate(360deg);
+  }
+}
+.catalog__filter-input-name{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #362F62;
+  padding: 0 5px;
+}
+.catalog__filter-input-select{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #362F62;
+  padding: 0 5px;
+}
+.catalog__filter-input-options{
+  padding: 20px;
+}

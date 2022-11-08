@@ -1,0 +1,19 @@
+.footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2000px;
+    width: 1000vw ;
+    border-top: 1px solid #724DF0;
+  }
+}
+.footer__name{
+
+}
+.footer__git{
+
+}
