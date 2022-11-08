@@ -10,9 +10,13 @@
       .cat__card-img
         img( :src="cats[this.$route.params.id - 1].img ? cats[this.$route.params.id - 1].img : 'https://catherineasquithgallery.com/uploads/posts/2021-12/1639688886_146-catherineasquithgallery-com-p-kotiki-rozovii-fon-467.jpg' ")
       .cat__card-title
-      h3 {{ cat.title }} 123
         .cat__card-name {{ cats[this.$route.params.id - 1].title }}
-        .cat__card-price {{ cats[this.$route.params.id - 1].price === 0 ? price : cats[this.$route.params.id - 1].price }}
+        .cat__card-price(
+          v-if="cats[this.$route.params.id - 1].price"
+        ) {{ cats[this.$route.params.id - 1].price }}
+        .cat__card-price-free(
+          v-else
+        ) Бесплатно
 </template>
 
 <script>

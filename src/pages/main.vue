@@ -8,10 +8,17 @@
 .main__container{
   position: relative;
   flex-grow: 1;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main__box{
+  margin: auto;
 }
 .main__title{
+  display: flex;
+  justify-content: center;
 
 }
 </style>

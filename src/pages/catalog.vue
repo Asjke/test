@@ -62,8 +62,13 @@
                   img( :src="item.img ? item.img : 'https://catherineasquithgallery.com/uploads/posts/2021-12/1639688886_146-catherineasquithgallery-com-p-kotiki-rozovii-fon-467.jpg'")
                 .catalog__item-title
                   p {{ item.title }}
-                .catalog__item-price
+                .catalog__item-price(
+                  v-if="item.price"
+                )
                   p {{ item.price }}
+                .catalog__item-price-free(
+                  v-else
+                ) Бесплатно
 
 </template>
 <script>
