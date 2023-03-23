@@ -16,7 +16,7 @@ export default {
     Footer
   },
   mounted () {
-    this.$router.push('/main')
+    // this.$router.push('/main/')
   }
 }
 </script>

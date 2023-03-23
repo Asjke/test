@@ -48,7 +48,7 @@
               :class="[ !sortStatus ? 'catalog__card-sort-img-rotate-1' : 'catalog__card-sort-img-rotate']"
             )
               .catalog__card-sort-img
-                img#img( :src="require('../assets/img/sort.svg')")
+                img#img( :src="require('@/assets/img/sort.svg')")
             .catalog__card-sort-title По цене
           transition-group.catalog__list(
             name="list-animation"

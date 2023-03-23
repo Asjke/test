@@ -2,7 +2,7 @@
   .container.animate__animated.animate__fadeIn
     .cat__back
       button.cat__back-btn(@click="$router.go(-1)")
-        img(:src="require('../assets/img/back.svg')")
+        img(:src="require('@/assets/img/back.svg')")
       p.cat__back-btn-title Вернуться в каталог
     transition(name="card-anim", :key="catId")
       .cat__card.animated.fadeInUp
