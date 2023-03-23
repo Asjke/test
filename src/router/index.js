@@ -19,7 +19,7 @@ const routes = [
     //   import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
-    path: "/cat/:id",
+    path: "/cat/:id/",
     component: cat,
     // component: () =>
     //   import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
@@ -28,7 +28,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
+  base: '/test/',
   routes,
 });
 
