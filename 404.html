@@ -14,5 +14,12 @@
       );
       window.location.replace(url);
     })();
+    (function() {
+      if (window.location.pathname.startsWith('/test/')) {
+        var path = window.location.pathname.replace('/test', '') || '/';
+        var hash = window.location.hash;
+        window.history.replaceState(null, null, '/test/' + path + hash);
+      }
+    })();
   </script>
 </head>
