@@ -4,7 +4,7 @@
       .header__logo
         router-link(to="/main")
           .main-nav__logo-img
-            <img src='../assets/icons/etton-logo.svg' alt='logo'>
+            img(:src="require('../assets/image/etton-logo.svg')")
       .header_main-nav
         ul.main-nav__list
           li.main-nav__item(
