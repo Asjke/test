@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import main from "@/pages/main";
 import catalog from "@/pages/catalog";
+
 import cat from "@/pages/cat";
 
 Vue.use(VueRouter);

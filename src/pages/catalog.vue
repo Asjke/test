@@ -1,13 +1,13 @@
 <template lang="pug">
   .container
-    .catalog
-      .catalog__container
+    .catalog.animated.fadeInUp
+      .catalog__container.animate__animated.animate__fadeIn
         .div
         h1 Каталог
         button.btn.btn--main.catalog-btn-filter(
           @click='showFilter = !showFilter'
         ) Фильтры
-        .catalog__filter(
+        .catalog__filter.animated.fadeInUp(
           v-if="showFilter"
         )
           input.catalog__filter-input-name(
@@ -17,7 +17,7 @@
           select.catalog__filter-input-select(
             v-model="breed"
             placeholder=""
-            )
+          )
             option.catalog__filter-input-options(
               value="all"
             ) Все породы
@@ -41,7 +41,7 @@
             v-if="breed !== 'all' || name || freeCheck.length"
             @click="clearFiltering"
           ) Сброс
-        .catalog__card-container
+        .catalog__card-container.animated.fadeInUp
           .catalog__card-sort
             button.catalog__card-sort-btn(
               @click="sorting"
@@ -50,8 +50,11 @@
               .catalog__card-sort-img
                 img#img( src="../assets/icons/sort.svg")
             .catalog__card-sort-title По цене
-          ul.catalog__list
-            li.catalog__item(
+          transition-group.catalog__list(
+            name="list-animation"
+            tag="ul"
+          )
+            li.catalog__item.animated.fadeIn(
               v-for="item in cats"
               :key="item.id"
             )
@@ -69,8 +72,8 @@
                 .catalog__item-price-free(
                   v-else
                 ) Бесплатно
-
 </template>
+import 'animate.css';
 <script>
 export default {
   data () {
